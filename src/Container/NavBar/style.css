@@ -1,0 +1,23 @@
+.navBar {
+    display: flex;
+    flex-direction: row;
+    padding: 7px 10px;
+    border: 1px solid rgb(222,226,330);
+    align-items: center;
+}
+
+#icon {
+    width: 127px;
+    height: 57.5px;
+}
+
+.navBtn-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start !important;
+}
+
+.btn {
+    padding: 0px 6px;
+}
