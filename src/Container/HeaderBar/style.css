@@ -13,12 +13,11 @@
 }
 
 #message {
-    /* flex-basis:66.66%; */
+    margin: auto
 }
 
 #btnCustomized {
     /* flex-basis:33.33%; */
     margin-left: 10px;
-    padding-bottom: 2.5px;
-    padding-top: 2.5px;
+    padding: 5px 5px !important;
 }

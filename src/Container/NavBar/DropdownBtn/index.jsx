@@ -3,7 +3,6 @@ import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 
 const useStyles = makeStyles((theme) => ({
   button: {
@@ -13,15 +12,24 @@ const useStyles = makeStyles((theme) => ({
 
 export default function IconLabelButtons(props) {
   const classes = useStyles();
-  const {name} = props;
+  const {name, showDropdown, setShowDropdown} = props;
 
   return (
       <Button
         variant="contained"
         color="primary"
         className={classes.button}
-        endIcon={<ExpandMoreIcon style={{fill: "black"}} />}
-        id="navButton"
+        endIcon={
+          <ExpandMoreIcon 
+            style={{
+              fill: "black", 
+              transform: showDropdown===true?"rotate(180deg)":"none",
+              transition: "transform 0.3s linear"
+            }} 
+          />
+        }
+        id={"navButton"}
+        onClick = {() => {setShowDropdown()}}
       >
         {name}
       </Button>

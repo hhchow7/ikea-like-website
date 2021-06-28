@@ -4,8 +4,20 @@ import './style.css'
 
 import DropdownBtn from './DropdownBtn/index'
 import Button from './Button'
+import SearchBar from '../../Component/SearchBar'
+import ShoppingCartBtn from './ShoppingCartBtn'
 
 class NavBar extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            showProductDropdown: false,
+            showRoomDropdown: false
+        };
+    }
+
+
     render() {
         return (
             <div className="navBar">
@@ -19,11 +31,23 @@ class NavBar extends Component {
                     <span className="btn">
                         <DropdownBtn
                             name="Products"
+                            showDropdown={this.state.showProductDropdown}
+                            setShowDropdown={() => {
+                                this.setState({
+                                    showProductDropdown: !this.state.showProductDropdown
+                                })
+                            }}
                         />
                     </span>
                     <span className="btn">
                         <DropdownBtn
                             name="Rooms"
+                            showDropdown={this.state.showRoomDropdown}
+                            setShowDropdown={() => {
+                                this.setState({
+                                    showRoomDropdown: !this.state.showRoomDropdown
+                                })
+                            }}
                         />
                     </span>
                     <span className="btn">
@@ -47,6 +71,8 @@ class NavBar extends Component {
                         />
                     </span>
                 </div>
+                <SearchBar/>
+                <ShoppingCartBtn/>
             </div>
         );
     }
