@@ -17,7 +17,7 @@ function AlertDismissible() {
             dismissible
         >
           <p>
-            Change this and that and try again. Duis mollis, est non commodo
+          Sale - From now till Jul 21, over 1,000 products up to 60% off!
           </p>
         </Alert>
       );

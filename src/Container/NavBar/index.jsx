@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 
 import './style.css'
 
-import DropdownBtn from './DropdownBtn/index'
-import Button from './Button'
+import DropdownBtn from '../NavigationBar/DropdownBtn/index'
+import Button from '../NavigationBar/Button'
 import SearchBar from '../../Component/SearchBar'
-import ShoppingCartBtn from './ShoppingCartBtn'
+import ShoppingCartBtn from '../NavigationBar/ShoppingCartBtn'
 
 class NavBar extends Component {
 

@@ -3,7 +3,7 @@ import './App.css';
 import { Container, Row, Col } from 'react-bootstrap';
 
 import HeaderBar from './Container/HeaderBar'
-import NavBar from './Container/NavBar'
+import NavigationBar from './Container/NavigationBar'
 import SlideShow from './Component/Slideshow'
 import ProductSlideShow from './Container/ProductSlideShow'
 
@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <HeaderBar/>
-      <NavBar/>
+      <NavigationBar/>
       <Container fluid>
         <Row>
           <Col>

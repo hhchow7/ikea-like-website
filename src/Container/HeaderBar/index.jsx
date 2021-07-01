@@ -17,11 +17,12 @@ class index extends Component {
                     variant="danger" 
                     // onClose={() => setShow(false)} 
                     className = "alertArea"
+                    classes={{ close: 'my-class-name' }}
                     dismissible
                 >
                     <div id="row">
                         <span id="message">
-                            Change this and that and try again. Duis mollis, est non commodo
+                        Sale - From now till Jul 21, over 1,000 products up to 60% off!
                         </span>
                         <button type="button" class="btn btn-warning" id="btnCustomized">
                             Click Here

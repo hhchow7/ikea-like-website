@@ -2,13 +2,17 @@ import React, { Component } from 'react'
 
 import { Carousel } from 'react-bootstrap';
 
+import './style.css'
+
 export class Slideshow extends Component {
     render() {
         return (
                 <Carousel>
-                    <Carousel.Item>
+                    <Carousel.Item
+                    >
                         <img
                         className="d-block w-100"
+                        id="img"
                         src="/img/banner1.jpeg"
                         alt="First slide"
                         />
@@ -16,6 +20,7 @@ export class Slideshow extends Component {
                     <Carousel.Item>
                         <img
                         className="d-block w-100"
+                        id="img"
                         src="/img/banner2.jpeg"
                         alt="Second slide"
                         />
@@ -23,6 +28,7 @@ export class Slideshow extends Component {
                     <Carousel.Item>
                         <img
                         className="d-block w-100"
+                        id="img"
                         src="/img/banner3.jpeg"
                         alt="Third slide"
                         />
