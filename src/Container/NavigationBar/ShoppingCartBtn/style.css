@@ -3,3 +3,8 @@
     height: 32px;
     cursor: pointer;
 }
+
+#shopping-cart-badge {
+    margin-left: auto;
+    margin-right: 10px;
+}

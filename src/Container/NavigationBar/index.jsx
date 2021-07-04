@@ -35,7 +35,6 @@ class NavigationBar extends Component{
               />
             </a>
           </div>
-  
           <ul className={this.state.showMenu ? "nav-options active" : "nav-options"}>
             <li className="option">
                     <span className="btn">
@@ -93,25 +92,24 @@ class NavigationBar extends Component{
             </li>
           </ul>
         </div>
-        {/* <ul className="signin-up">
-          <li className="sign-in">
-            <a href="#">SIGN-IN</a>
-          </li>
-        </ul> */}
-        <MediaQuery minWidth={570}>
-          <SearchBar/>
-        </MediaQuery>
-        <MediaQuery maxWidth={569}>
-          <IconButton
-            aria-label="search"
-            style={{flexGrow: 1}}
-            // id="icon-button"
-          >
-            <SearchIcon id="icon-button" />
-          </IconButton>
-        </MediaQuery>
-
-        <ShoppingCartBtn/>
+        <div class="d-flex justify-content-center align-items-center">
+          <div class="p-2">
+              <MediaQuery minWidth={901}>
+                <SearchBar/>
+              </MediaQuery>
+              <MediaQuery maxWidth={900}>
+                <IconButton
+                  aria-label="search"
+                  style={{flexGrow: 0}}
+                >
+                  <SearchIcon id="icon-button" />
+                </IconButton>
+              </MediaQuery>
+            </div>
+            <div class="p-2">
+               <ShoppingCartBtn/>
+            </div>
+        </div>
         <div className="mobile-menu"
               onClick={() => {
                 this.setState({showMenu: !this.state.showMenu})

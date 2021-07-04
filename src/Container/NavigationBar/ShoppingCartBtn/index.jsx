@@ -11,7 +11,7 @@ export default function App() {
             <Badge color="secondary" 
                    badgeContent={itemCount} 
                    onClick={() =>{console.log("foofofo")}}
-                   style={{flexGrow: 1}}
+                   id="shopping-cart-badge"
             >
                 <ShoppingCartIcon id="icon-button"/>{" "}
             </Badge>
