@@ -5,7 +5,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import HeaderBar from './Container/HeaderBar'
 import NavigationBar from './Container/NavigationBar'
 import SlideShow from './Component/Slideshow'
-import ProductSlideShow from './Container/ProductSlideShow'
+import NewProducts from './Container/Pages/HomePage/NewProducts'
 
 function App() {
   return (
@@ -13,20 +13,17 @@ function App() {
       <HeaderBar/>
       <NavigationBar/>
       <Container fluid>
-        <Row>
-          <Col>
-            <SlideShow/>
-          </Col>
-        </Row>
+        <Container>
+            <Row>
+              <Col>
+                <SlideShow/>
+              </Col>
+            </Row>
+        </Container>
+        <hr className="divider"/>
+        <NewProducts/>
+        <hr className="divider"/>
       </Container>
-      <Container fluid className="mt-4 mb-4">
-        <Row>
-          <Col>
-            <hr className="divider"/>
-          </Col>
-        </Row>
-      </Container>
-      <ProductSlideShow/>
     </div>
   );
 }

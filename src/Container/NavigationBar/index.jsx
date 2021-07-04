@@ -92,8 +92,8 @@ class NavigationBar extends Component{
             </li>
           </ul>
         </div>
-        <div class="d-flex justify-content-center align-items-center">
-          <div class="p-2">
+        <div className="d-flex justify-content-center align-items-center">
+          <div className="p-2">
               <MediaQuery minWidth={901}>
                 <SearchBar/>
               </MediaQuery>
@@ -106,7 +106,7 @@ class NavigationBar extends Component{
                 </IconButton>
               </MediaQuery>
             </div>
-            <div class="p-2">
+            <div className="p-2">
                <ShoppingCartBtn/>
             </div>
         </div>
