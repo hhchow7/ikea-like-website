@@ -57,36 +57,36 @@ export class ProductSlideShow extends Component {
                 <Slider {...slickSettings}>
                     <div>
                         <Product
-                            imgSrc="/img/Homepage/NewProduct/product1.jpeg"
-                            imgAlt="product1"
-                            name="VIMLE"
+                            imgSrc="/img/Homepage/NewProduct/harry_potter.png"
+                            imgAlt="harry_potter"
+                            name="Harry Potter"
                             description="3-seat sofa, saxemara light blue"
-                            price="$4690"
+                            price="$46"
                         />
                     </div>
                     <div>
                         <Product
-                            imgSrc="/img/Homepage/NewProduct/product2.jpeg"
-                            imgAlt="product2"
-                            name="LYCKSELE LÖVÅS"
+                            imgSrc="/img/Homepage/NewProduct/dog_man.png"
+                            imgAlt="Dog Man"
+                            name="Dog Man"
                             description="Chair-bed, tutstad multicolour"
                             price="$1250"
                         />
                     </div>
                     <div>
                         <Product
-                            imgSrc="/img/Homepage/NewProduct/product3.jpeg"
-                            imgAlt="product3"
-                            name="VEDBO"
+                            imgSrc="/img/Homepage/NewProduct/valiant.png"
+                            imgAlt="valiant"
+                            name="Valiant"
                             description="Armchair, gunnared light green"
                             price="$1990"
                         />
                     </div>
                     <div>
                         <Product
-                            imgSrc="/img/Homepage/NewProduct/product4.jpeg"
-                            imgAlt="product4"
-                            name="POÄNG"
+                            imgSrc="/img/Homepage/NewProduct/complusive_comics.png"
+                            imgAlt="complusive_comics"
+                            name="Complusive Comics"
                             description="Birch veneer/gisslarp cat pattern"
                             price="$450"
                         />

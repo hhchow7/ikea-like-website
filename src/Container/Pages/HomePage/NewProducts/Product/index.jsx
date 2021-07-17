@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import VisibilityIcon from '@material-ui/icons/Visibility';
 
+import './style.css'
+
 export class Product extends Component {
     constructor(props) {
         super(props);
@@ -12,9 +14,9 @@ export class Product extends Component {
         return (
             <>
             <div className="card mb-3 border-0" style={{maxWidth: "18rem"}}>
-                <div className="card-header bg-transparent border-0">
+                <div className="card-header bg-transparent border-0 img_container">
                     <a href="#">
-                        <img className="w-100" src={imgSrc} alt={imgAlt}/>
+                        <img  src={imgSrc} alt={imgAlt}/>
                     </a>
                 </div>
                 <div className="card-body">

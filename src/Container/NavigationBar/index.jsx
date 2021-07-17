@@ -2,6 +2,8 @@ import React, { Component }  from "react";
 import MediaQuery from 'react-responsive'
 import SearchIcon from "@material-ui/icons/Search";
 import IconButton from "@material-ui/core/IconButton";
+import {useSelector, useDispatch} from 'react-redux'
+import {toggleMenu, toggleProductDropdown} from '../../redux/actions'
 
 import DropdownBtn from './DropdownBtn'
 import Button from './Button'
@@ -13,43 +15,33 @@ import { ReactComponent as MenuIcon } from "../../asset/NavigationBar/menu.svg";
 
 import "./style.css";
 
-class NavigationBar extends Component{
-  constructor(props) {
-    super(props);
-    this.state = {
-        showMenu: false,
-        showProductDropdown: false,
-        showRoomDropdown: false
-    };
-  }
+function NavigationBar(){
+  const dispatch = useDispatch()
+  const showMenu = useSelector(state => state.toggleMenu)
+  const showProductDropdown = useSelector(state => state.toggleProductDropdown)
 
-  render() {
     return (
       <div className="header">
         <div className="logo-nav">
           <div className="logo-container">
             <a href="#">
               <img
-                  src="./img/NavigationBar/ikea.svg"
+                  src="./img/NavigationBar/book_store_icon.png"
                   id="icon"
               />
             </a>
           </div>
-          <ul className={this.state.showMenu ? "nav-options active" : "nav-options"}>
+          <ul className={showMenu ? "nav-options active" : "nav-options"}>
             <li className="option">
                     <span className="btn">
                         <DropdownBtn
                             name="Products"
-                            showDropdown={this.state.showProductDropdown}
-                            setShowDropdown={() => {
-                                this.setState({
-                                    showProductDropdown: !this.state.showProductDropdown
-                                })
-                            }}
+                            showDropdown={showProductDropdown}
+                            setShowDropdown={() => {dispatch(toggleProductDropdown())}}
                         />
                     </span>
             </li>
-            <li className="option">
+            {/* <li className="option">
                  <span className="btn">
                         <DropdownBtn
                             name="Rooms"
@@ -61,7 +53,7 @@ class NavigationBar extends Component{
                             }}
                         />
                   </span>
-            </li>
+            </li> */}
             <li className="option">
                 <span className="btn">
                   <Button
@@ -111,11 +103,9 @@ class NavigationBar extends Component{
             </div>
         </div>
         <div className="mobile-menu"
-              onClick={() => {
-                this.setState({showMenu: !this.state.showMenu})
-              }}
+              onClick={() => {dispatch(toggleMenu())}}
         >
-          {this.state.showMenu ? (
+          {showMenu ? (
             <CloseMenu className="menu-icon" />
           ) : (
             <MenuIcon className="menu-icon" />
@@ -123,7 +113,6 @@ class NavigationBar extends Component{
         </div>
       </div>
     );
-    }
   };
   
   export default NavigationBar;
