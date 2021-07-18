@@ -1,0 +1,44 @@
+.table {
+    box-shadow: rgb(0 0 0 / 16%) 0px 8px 8px;;
+}
+
+.row {
+    padding: 25px;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+#visible-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: rgb(240, 252, 249); 
+}
+
+#hidden-area {
+
+}
+
+.date-area {
+    /* float: left; */
+}
+
+.title-area {
+    /* float: right; */
+}
+
+.expand-btn {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.expand-icon {
+    /* transform: scale(1.8) */
+}

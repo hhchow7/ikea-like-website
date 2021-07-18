@@ -2,6 +2,16 @@
   text-align: center;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 #navButton {
   background-color: transparent;
   box-shadow: none;
@@ -15,13 +25,15 @@
   margin-right: 0px;
 }
 
-a {
-  text-decoration: none;
-  color: black;
+/* Products, News etc */
+.section-header {
+  font-size: 2rem;
+  color: rgb(30, 50, 100);
 }
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+
+.section-wrapper {
+  margin-left: 4rem;
+  margin-right: 4rem;
 }
+
 
