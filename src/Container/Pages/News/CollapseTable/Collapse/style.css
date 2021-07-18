@@ -1,6 +1,3 @@
-.table {
-    box-shadow: rgb(0 0 0 / 16%) 0px 8px 8px;;
-}
 
 .row {
     padding: 25px;
@@ -14,19 +11,20 @@
     justify-content: space-between;
     align-items: center;
 
-    background-color: rgb(240, 252, 249); 
+    background-color: rgba(228, 241, 254, 1); 
 }
 
 #hidden-area {
-
+    background-color: transparent
 }
 
 .date-area {
-    /* float: left; */
+    font-size: 1.2rem;
+    font-weight: 400;
 }
 
 .title-area {
-    /* float: right; */
+    font-size: 1.2rem;
 }
 
 .expand-btn {
@@ -37,8 +35,4 @@
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
-}
-
-.expand-icon {
-    /* transform: scale(1.8) */
 }
