@@ -2,6 +2,9 @@ import React, { Component }  from "react";
 import MediaQuery from 'react-responsive'
 import SearchIcon from "@material-ui/icons/Search";
 import IconButton from "@material-ui/core/IconButton";
+import {Link} from 'react-router-dom'
+
+
 import {useSelector, useDispatch} from 'react-redux'
 import {toggleMenu, toggleProductDropdown} from '../../redux/actions'
 
@@ -24,12 +27,12 @@ function NavigationBar(){
       <div className="header">
         <div className="logo-nav">
           <div className="logo-container">
-            <a href="#">
+            <Link to="/">
               <img
                   src="./img/NavigationBar/book_store_icon.png"
                   id="icon"
               />
-            </a>
+            </Link>
           </div>
           <ul className={showMenu ? "nav-options active" : "nav-options"}>
             <li className="option">
@@ -61,13 +64,15 @@ function NavigationBar(){
                   />
                 </span>
             </li>
-            <li className="option">
-               <span className="btn">
-                  <Button
-                      name="New"
-                  />
-                </span>
-            </li>
+            <Link to="/news">
+              <li className="option">
+                <span className="btn">
+                    <Button
+                        name="News"
+                    />
+                  </span>
+              </li>
+            </Link>
             <li className="option">
               <span className="btn">
                   <Button

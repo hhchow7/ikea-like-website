@@ -1,11 +1,14 @@
-import { Container, Row, Col } from 'react-bootstrap';
 import React, {useEffect } from 'react';
+import {Switch, Route} from 'react-router-dom'
+
 import './App.css';
 
 import HeaderBar from './Container/HeaderBar'
 import NavigationBar from './Container/NavigationBar'
-import SlideShow from './Component/Slideshow'
-import NewProducts from './Container/Pages/HomePage/NewProducts'
+
+// pages
+import HomePage from './Container/Pages/HomePage'
+import News from './Container/Pages/News'
 
 import {useSelector, useDispatch} from 'react-redux'
 import {increment} from './redux/actions'
@@ -23,18 +26,10 @@ function App() {
     <div className="App">
       <HeaderBar/>
       <NavigationBar/>
-      <Container fluid>
-        <Container>
-            <Row>
-              <Col>
-                <SlideShow/>
-              </Col>
-            </Row>
-        </Container>
-        <hr className="divider"/>
-        <NewProducts/>
-        <hr className="divider"/>
-      </Container>
+      <Switch>
+        <Route path="/" exact component={HomePage} />
+        <Route path="/news" exact component={News} />
+      </Switch>
     </div>
   );
 }
