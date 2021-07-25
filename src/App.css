@@ -32,8 +32,39 @@ a {
 }
 
 .section-wrapper {
-  margin-left: 4rem;
-  margin-right: 4rem;
+  margin-left: 64px;
+  margin-right: 64px;
 }
 
 
+
+@media (max-width: 1050px) {
+
+  .section-wrapper {
+    margin-left: 36px;
+    margin-right: 36px;
+  }
+
+
+}
+
+
+@media (max-width: 650px) {
+
+  .section-wrapper {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+
+}
+
+@media (max-width: 400px) {
+
+  /* .section-wrapper {
+    margin-left: 10px;
+    margin-right: 10px;
+  } */
+
+
+}

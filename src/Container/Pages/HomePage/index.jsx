@@ -7,16 +7,12 @@ import NewProducts from '../../../Container/Pages/HomePage/NewProducts'
 function HomePage() {
     return (
       <Container fluid>
-        <Container>
-            <Row>
-              <Col>
-                <SlideShow/>
-              </Col>
-            </Row>
-        </Container>
+        <div className="section-wrapper">
+          <SlideShow/>
+        </div>
         <hr className="divider"/>
         <NewProducts/>
-        <hr className="divider"/>
+        <hr className="divider mt-5"/>
       </Container>
     )
 }

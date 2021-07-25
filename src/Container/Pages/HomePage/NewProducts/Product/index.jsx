@@ -9,7 +9,7 @@ export default function Product(props) {
 
     return (
         <>
-        <div className="card mb-3 border-0" style={{maxWidth: "18rem"}}>
+        <div className="card mb-3 border-0">
             <div className="card-header bg-transparent border-0 img_container">
                 <a href="#">
                     <img src={imgSrc} alt={imgAlt}/>
