@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import Slider from "react-slick";
 
-import Product from './Product'
 import axios from '../../../../api';
+import Product from './Product'
+import QuickViewDialog from './QuickViewDialog'
 
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
@@ -51,6 +52,7 @@ var slickSettings = {
 export default function ProductSlideShow() {
 
     const [products, setProducts] = useState([])
+    const [openQuickViewDialog, setOpenQuickViewDialog] = useState(false)
 
     useEffect(() => {
       async function fetchData() {
@@ -59,6 +61,12 @@ export default function ProductSlideShow() {
       }
       fetchData()
   }, []);
+
+    function quickView(product) {
+      // setOpenQuickViewDialog(true)
+      console.log(product)
+      console.log("quickView")
+    }
   
     return (
         <>
@@ -71,17 +79,27 @@ export default function ProductSlideShow() {
                   return (
                     <div key={product.id}>
                       <Product
+                        id={product.id}
                         imgSrc={product.src}
                         imgAlt={product.alt}
                         name={product.name}
                         description={product.description}
                         price={product.price}
+                        quickViewFunction={()=>{quickView(product)}}
                       />
                     </div>
                   )
                 })
               }
             </Slider>
+            {openQuickViewDialog?
+                <QuickViewDialog
+                    open={openQuickViewDialog}
+                    handleClose={()=>{setOpenQuickViewDialog(false)}}
+                />
+                :
+                ""
+            }
         </>
     )
 }

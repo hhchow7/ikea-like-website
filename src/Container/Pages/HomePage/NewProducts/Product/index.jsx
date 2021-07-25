@@ -1,11 +1,12 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import VisibilityIcon from '@material-ui/icons/Visibility';
 
 import './style.css'
 
 export default function Product(props) {
 
-    const {imgSrc, imgAlt, name, description, price} = props
+    const {id ,imgSrc, imgAlt, name, description, price} = props
 
     return (
         <>
@@ -21,12 +22,16 @@ export default function Product(props) {
                 <h4 className="card-text">{price}</h4>
             </div>
             <div className="card-footer bg-transparent border-0">
-                    <button type="button" className="btn border px-4 py-2">
+            <Link to={`/products/${id}`}>
+                <button type="button" className="btn border px-4 py-2">
                     <span className="mr-2">
                         <VisibilityIcon/>
                     </span>
-                    <span>Quick View</span>
+                    <span>
+                        View
+                    </span>
                 </button>
+            </Link>
             </div>
         </div>
         </>
