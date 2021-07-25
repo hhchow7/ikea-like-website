@@ -10,8 +10,8 @@ import NavigationBar from './Container/NavigationBar'
 import HomePage from './Container/Pages/HomePage'
 import News from './Container/Pages/News'
 
-import {useSelector, useDispatch} from 'react-redux'
-import {increment} from './redux/actions'
+// import {useSelector, useDispatch} from 'react-redux'
+// import {increment} from './redux/actions'
  
 
 function App() {

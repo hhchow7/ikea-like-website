@@ -1,4 +1,4 @@
-import React, { Component }  from "react";
+import React from "react";
 import MediaQuery from 'react-responsive'
 import SearchIcon from "@material-ui/icons/Search";
 import IconButton from "@material-ui/core/IconButton";
@@ -30,6 +30,7 @@ function NavigationBar(){
             <Link to="/">
               <img
                   src="./img/NavigationBar/book_store_icon.png"
+                  alt="book_store_icon"
                   id="icon"
               />
             </Link>

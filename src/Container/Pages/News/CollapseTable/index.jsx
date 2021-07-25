@@ -11,7 +11,7 @@ function CollapseTable(props) {
             {
                 items.map(item => {
                     return (
-                        <Collapse item={item}/>
+                        <Collapse key={item.key} item={item}/>
                     )
                 })
             }

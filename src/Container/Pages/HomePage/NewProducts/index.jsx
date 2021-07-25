@@ -1,7 +1,8 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 import Slider from "react-slick";
 
 import Product from './Product'
+import axios from '../../../../api';
 
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
@@ -48,51 +49,40 @@ var slickSettings = {
 
 
 export default function ProductSlideShow() {
+
+    const [products, setProducts] = useState([])
+
+    useEffect(() => {
+      async function fetchData() {
+          const response = await axios.get('/products');
+          setProducts(response.data)
+      }
+      fetchData()
+  }, []);
   
-      return (
-          <>
-              <div className="text-center mb-5">
-                  <h2>New products</h2>
-              </div>
-              <Slider {...slickSettings}>
-                  <div>
+    return (
+        <>
+            <div className="text-center mb-5">
+                <h2>New products</h2>
+            </div>
+            <Slider {...slickSettings}>
+              {
+                products.map(product => {
+                  return (
+                    <div key={product.id}>
                       <Product
-                          imgSrc="/img/Homepage/NewProduct/harry_potter.png"
-                          imgAlt="harry_potter"
-                          name="Harry Potter"
-                          description="3-seat sofa, saxemara light blue"
-                          price="$46"
+                        imgSrc={product.src}
+                        imgAlt={product.alt}
+                        name={product.name}
+                        description={product.description}
+                        price={product.price}
                       />
-                  </div>
-                  <div>
-                      <Product
-                          imgSrc="/img/Homepage/NewProduct/dog_man.png"
-                          imgAlt="Dog Man"
-                          name="Dog Man"
-                          description="Chair-bed, tutstad multicolour"
-                          price="$1250"
-                      />
-                  </div>
-                  <div>
-                      <Product
-                          imgSrc="/img/Homepage/NewProduct/valiant.png"
-                          imgAlt="valiant"
-                          name="Valiant"
-                          description="Armchair, gunnared light green"
-                          price="$1990"
-                      />
-                  </div>
-                  <div>
-                      <Product
-                          imgSrc="/img/Homepage/NewProduct/complusive_comics.png"
-                          imgAlt="complusive_comics"
-                          name="Complusive Comics"
-                          description="Birch veneer/gisslarp cat pattern"
-                          price="$450"
-                      />
-                  </div>
-              </Slider>
-          </>
-      )
+                    </div>
+                  )
+                })
+              }
+            </Slider>
+        </>
+    )
 }
 

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import VisibilityIcon from '@material-ui/icons/Visibility';
 
 import './style.css'
@@ -12,7 +12,7 @@ export default function Product(props) {
         <div className="card mb-3 border-0" style={{maxWidth: "18rem"}}>
             <div className="card-header bg-transparent border-0 img_container">
                 <a href="#">
-                    <img  src={imgSrc} alt={imgAlt}/>
+                    <img src={imgSrc} alt={imgAlt}/>
                 </a>
             </div>
             <div className="card-body">
@@ -21,7 +21,7 @@ export default function Product(props) {
                 <h4 className="card-text">{price}</h4>
             </div>
             <div className="card-footer bg-transparent border-0">
-                    <button type="button" class="btn border px-4 py-2">
+                    <button type="button" className="btn border px-4 py-2">
                     <span className="mr-2">
                         <VisibilityIcon/>
                     </span>
