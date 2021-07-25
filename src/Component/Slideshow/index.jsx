@@ -4,8 +4,8 @@ import { Carousel } from 'react-bootstrap';
 
 import './style.css'
 
-export class Slideshow extends Component {
-    render() {
+export default function Slideshow() {
+
         return (
                 <Carousel>
                     <Carousel.Item
@@ -35,7 +35,5 @@ export class Slideshow extends Component {
                     </Carousel.Item>
                 </Carousel>
         )
-    }
-}
 
-export default Slideshow
+}

@@ -47,54 +47,52 @@ var slickSettings = {
   };
 
 
-export class ProductSlideShow extends Component {
-    render() {
-        return (
-            <>
-                <div className="text-center mb-5">
-                    <h2>New products</h2>
-                </div>
-                <Slider {...slickSettings}>
-                    <div>
-                        <Product
-                            imgSrc="/img/Homepage/NewProduct/harry_potter.png"
-                            imgAlt="harry_potter"
-                            name="Harry Potter"
-                            description="3-seat sofa, saxemara light blue"
-                            price="$46"
-                        />
-                    </div>
-                    <div>
-                        <Product
-                            imgSrc="/img/Homepage/NewProduct/dog_man.png"
-                            imgAlt="Dog Man"
-                            name="Dog Man"
-                            description="Chair-bed, tutstad multicolour"
-                            price="$1250"
-                        />
-                    </div>
-                    <div>
-                        <Product
-                            imgSrc="/img/Homepage/NewProduct/valiant.png"
-                            imgAlt="valiant"
-                            name="Valiant"
-                            description="Armchair, gunnared light green"
-                            price="$1990"
-                        />
-                    </div>
-                    <div>
-                        <Product
-                            imgSrc="/img/Homepage/NewProduct/complusive_comics.png"
-                            imgAlt="complusive_comics"
-                            name="Complusive Comics"
-                            description="Birch veneer/gisslarp cat pattern"
-                            price="$450"
-                        />
-                    </div>
-                </Slider>
-            </>
-        )
-    }
+export default function ProductSlideShow() {
+  
+      return (
+          <>
+              <div className="text-center mb-5">
+                  <h2>New products</h2>
+              </div>
+              <Slider {...slickSettings}>
+                  <div>
+                      <Product
+                          imgSrc="/img/Homepage/NewProduct/harry_potter.png"
+                          imgAlt="harry_potter"
+                          name="Harry Potter"
+                          description="3-seat sofa, saxemara light blue"
+                          price="$46"
+                      />
+                  </div>
+                  <div>
+                      <Product
+                          imgSrc="/img/Homepage/NewProduct/dog_man.png"
+                          imgAlt="Dog Man"
+                          name="Dog Man"
+                          description="Chair-bed, tutstad multicolour"
+                          price="$1250"
+                      />
+                  </div>
+                  <div>
+                      <Product
+                          imgSrc="/img/Homepage/NewProduct/valiant.png"
+                          imgAlt="valiant"
+                          name="Valiant"
+                          description="Armchair, gunnared light green"
+                          price="$1990"
+                      />
+                  </div>
+                  <div>
+                      <Product
+                          imgSrc="/img/Homepage/NewProduct/complusive_comics.png"
+                          imgAlt="complusive_comics"
+                          name="Complusive Comics"
+                          description="Birch veneer/gisslarp cat pattern"
+                          price="$450"
+                      />
+                  </div>
+              </Slider>
+          </>
+      )
 }
 
-export default ProductSlideShow
