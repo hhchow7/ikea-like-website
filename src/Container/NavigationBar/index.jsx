@@ -4,7 +4,6 @@ import SearchIcon from "@material-ui/icons/Search";
 import IconButton from "@material-ui/core/IconButton";
 import {Link} from 'react-router-dom'
 
-
 import {useSelector, useDispatch} from 'react-redux'
 import {toggleMenu, toggleProductDropdown} from '../../redux/actions'
 
@@ -17,6 +16,7 @@ import { ReactComponent as CloseMenu } from "../../asset/NavigationBar/opening-m
 import { ReactComponent as MenuIcon } from "../../asset/NavigationBar/menu.svg";
 
 import "./style.css";
+import customLinks from './links.json'
 
 function NavigationBar(){
   const dispatch = useDispatch()
@@ -45,49 +45,21 @@ function NavigationBar(){
                         />
                     </span>
             </li>
-            {/* <li className="option">
-                 <span className="btn">
-                        <DropdownBtn
-                            name="Rooms"
-                            showDropdown={this.state.showRoomDropdown}
-                            setShowDropdown={() => {
-                                this.setState({
-                                    showRoomDropdown: !this.state.showRoomDropdown
-                                })
-                            }}
-                        />
-                  </span>
-            </li> */}
-            <li className="option">
-                <span className="btn">
-                  <Button
-                          name="Inspiration"
-                  />
-                </span>
-            </li>
-            <Link to="/news">
-              <li className="option">
-                <span className="btn">
-                    <Button
-                        name="News"
-                    />
-                  </span>
-              </li>
-            </Link>
-            <li className="option">
-              <span className="btn">
-                  <Button
-                      name="New Lower Price"
-                  />
-              </span>
-            </li>
-            <li className="option">
-              <span className="btn">
-                  <Button
-                      name="Combo Offer"
-                  />
-              </span>
-            </li>
+            {
+              (customLinks.links).map(link => {
+                return(
+                  <Link key={link.id} to={link.path}>
+                    <li className="option">
+                      <span className="btn">
+                          <Button
+                              name={link.name}
+                          />
+                        </span>
+                    </li>
+                 </Link>
+                )
+              })
+            }
           </ul>
         </div>
         <div className="d-flex justify-content-center align-items-center">

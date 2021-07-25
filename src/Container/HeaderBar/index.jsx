@@ -1,16 +1,22 @@
 import React from 'react';
-
 import Alert from 'react-bootstrap/Alert'
+
+import {useSelector, useDispatch} from 'react-redux'
+import {closeHeaderBar} from '../../redux/actions'
 
 import './style.css'
 
 export default function HeaderBar(props)  {
 
+    const dispatch = useDispatch()
+    const shouldCloseHeaderBar = useSelector(state => state.closeHeaderBar)
+
     return (
         <div>
             <Alert 
                 variant="danger" 
-                // onClose={() => setShow(false)} 
+                show={!shouldCloseHeaderBar}
+                onClose={()=>{dispatch(closeHeaderBar())}} 
                 className = "alertArea"
                 classes={{ close: 'my-class-name' }}
                 dismissible

@@ -5,6 +5,13 @@ export const increment = (num) => {
     }
 }
 
+// Header Bar
+export const closeHeaderBar = () => {
+    return {
+        type: 'CLOSE_HEADER_BAR'
+    }
+}
+
 // Navigation Bar
 export const toggleMenu = () => {
     return {
