@@ -12,7 +12,7 @@ export default function HeaderBar(props)  {
     const shouldCloseHeaderBar = useSelector(state => state.closeHeaderBar)
 
     return (
-        <div>
+        <>
             <Alert 
                 variant="danger" 
                 show={!shouldCloseHeaderBar}
@@ -30,6 +30,6 @@ export default function HeaderBar(props)  {
                     </button>
                 </div>
             </Alert>
-        </div>
+        </>
     );
 }

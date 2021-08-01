@@ -1,3 +1,5 @@
+@import "../src/sass/variable.scss";
+
 .App {
   text-align: center;
 }
@@ -6,18 +8,15 @@ a {
   text-decoration: none;
   color: black;
 }
-
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 #navButton {
   background-color: transparent;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   color: black;
   font-size: 14px;
   height: 49px;
@@ -31,32 +30,27 @@ a {
 /* Products, News etc */
 .section-header {
   font-size: 2rem;
-  color: #1e3264;
+  color: rgb(30, 50, 100);
 }
 
 .section-wrapper {
   margin-left: 64px;
   margin-right: 64px;
-}
 
-@media all and (min-width: 1050px) {
-  .section-wrapper {
+  @include pc-width {
     margin-left: 36px;
     margin-right: 36px;
   }
-}
 
-@media all and (min-width: 480px) and (max-width: 759px) {
-  .section-wrapper {
+  @include small-pad-width{
     margin-left: 12px;
     margin-right: 12px;
   }
-}
 
-@media all and (max-width: 479px) {
-  .section-wrapper {
+  @include phone-width{
     margin-left: 12px;
     margin-right: 12px;
   }
+
 }
-/*# sourceMappingURL=App.css.map */
+

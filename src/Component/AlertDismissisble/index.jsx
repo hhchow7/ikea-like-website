@@ -3,8 +3,6 @@ import { useState } from 'react';
 
 import Alert from 'react-bootstrap/Alert'
 
-import './style.css';
-
 function AlertDismissible() {
     const [show, setShow] = useState(true);
   

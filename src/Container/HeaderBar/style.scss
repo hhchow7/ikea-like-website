@@ -1,0 +1,49 @@
+.alertArea {
+    padding-bottom: 9px !important;
+    padding-top: 9px !important;
+    margin-bottom: 0px !important;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    padding: .75rem 1.25rem;
+    color: inherit;
+    margin: auto;
+    height: 100%;
+}
+
+#row {
+    display: flex;
+    align-items: center;
+
+    #btnCustomized {
+        height: 50px;
+        min-width: 90px;
+        margin-left: 10px;
+        font-size: 14px;
+    }
+
+    #message {
+        margin: auto
+    }
+
+}
+
+
+
+
+
+
+@media only screen and (min-width: 570px) {
+
+    #btnCustomized {
+        padding: 5px 5px !important;
+        font-size: 14px;
+    }
+}

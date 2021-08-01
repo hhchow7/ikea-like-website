@@ -1,0 +1,42 @@
+// Different Size
+$pc-media: 1050px;
+$pcs-media: 850px;
+$pad-media: 760px;
+$pads-media: 759px;
+$phone-media: 480px;
+$phones-media: 479px;
+
+// PC
+@mixin pc-width() {
+      @media all and (min-width: $pc-media) {
+            @content;
+      }
+}
+// Tablet
+@mixin pad-width() {
+      @media all and (min-width: $pad-media) and (max-width: $pcs-media) {
+            @content;
+      }
+}
+// Small Tablet
+@mixin small-pad-width() {
+      @media all and (min-width: $phone-media) and (max-width: $pads-media) {
+            @content;
+      }
+}
+// Mobile
+@mixin phone-width() {
+      @media all and (max-width: $phones-media) {
+            @content;
+      }
+}
+
+// include all break-point
+@mixin rwd-all() {
+      @media all and (max-width: $pc-media) {
+            @content;
+      }
+}
+
+// default setting
+$defaultFontSize: 16px;
