@@ -18,6 +18,11 @@ export const toggleMenu = () => {
         type: 'TOGGLE_NAVIGATION_BAR_MENU'
     }
 }
+export const closeMenu = () => {
+    return {
+        type: 'CLOSE_NAVIGATION_BAR_MENU'
+    }
+}
 
 export const toggleProductDropdown = () => {
     return {
