@@ -1,0 +1,27 @@
+.comment-header {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.comment-area-all {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.comment-area-person {
+  width: 45%;
+}
+
+.person-name {
+  font-weight: 600;
+}
+
+.date {
+  font-size: 14px;
+  color: #786f70;
+}
+
+.comment-content {
+  text-align: start;
+}
+/*# sourceMappingURL=style.css.map */
