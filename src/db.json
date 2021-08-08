@@ -1,12 +1,88 @@
 {
-    "news": [
-      { "id": 1, "title": "news 1", "content": "This is the content 1", "date": "15-07-2021"},
-      { "id": 2, "title": "news 2", "content": "This is the content 2", "date": "20-07-2021"}
-    ],
-    "products": [
-      { "id": 1, "src": "/img/Homepage/NewProduct/harry_potter.png", "alt": "harry_potter", "name": "Harry Potter", "description": "3-seat sofa, saxemara light blue", "price": "$46"},
-      { "id": 2, "src": "/img/Homepage/NewProduct/dog_man.png", "alt": "Dog Man", "name": "Dog Man", "description": "Chair-bed, tutstad multicolour", "price": "$1250"},
-      { "id": 3, "src": "/img/Homepage/NewProduct/valiant.png", "alt": "valiant", "name": "Valiant", "description": "Armchair, gunnared light green", "price": "$1990"},
-      { "id": 4, "src": "/img/Homepage/NewProduct/complusive_comics.png", "alt": "complusive_comics", "name": "Valiant", "description": "Birch veneer/gisslarp cat pattern", "price": "$450"}
-    ]
-  }
+  "news": [
+    {
+      "id": 1,
+      "title": "news 1",
+      "content": "This is the content 1",
+      "date": "15-07-2021"
+    },
+    {
+      "id": 2,
+      "title": "news 2",
+      "content": "This is the content 2",
+      "date": "20-07-2021"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "src": "/img/Homepage/NewProduct/harry_potter.png",
+      "alt": "harry_potter",
+      "name": "Harry Potter",
+      "description": "3-seat sofa, saxemara light blue",
+      "price": "$46"
+    },
+    {
+      "id": 2,
+      "src": "/img/Homepage/NewProduct/dog_man.png",
+      "alt": "Dog Man",
+      "name": "Dog Man",
+      "description": "Chair-bed, tutstad multicolour",
+      "price": "$1250"
+    },
+    {
+      "id": 3,
+      "src": "/img/Homepage/NewProduct/valiant.png",
+      "alt": "valiant",
+      "name": "Valiant",
+      "description": "Armchair, gunnared light green",
+      "price": "$1990"
+    },
+    {
+      "id": 4,
+      "src": "/img/Homepage/NewProduct/complusive_comics.png",
+      "alt": "complusive_comics",
+      "name": "Valiant",
+      "description": "Birch veneer/gisslarp cat pattern",
+      "price": "$450"
+    }
+  ],
+  "feedbacks": [
+    {
+      "id": 1,
+      "name": "Andy Chow",
+      "date": "2021-01-01",
+      "comment": "My family and I stayed here for the weekend and we had a blast! Location was great, accessibility to food delivery services is easy, very accommodating staff, clean space, and cozy vibe. Exactly what we needed to destress from the hustle and bustle from Manila ☺️",
+      "score": [
+        { "type": "communication", "score": 4 },
+        { "type": "delivery", "score": 3 },
+        { "type": "price", "score": 3 },
+        { "type": "userFriendliness", "score": 3 }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Rita",
+      "date": "2021-02-01",
+      "comment": "Very Niceeeee ☺️",
+      "score": [
+        { "type": "communication", "score": 4 },
+        { "type": "delivery", "score": 4 },
+        { "type": "price", "score": 4 },
+        { "type": "userFriendliness", "score": 4 }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Tom",
+      "date": "2021-02-29",
+      "comment": "It is a Very decent service ☺️",
+      "score": [
+        { "type": "communication", "score": 4 },
+        { "type": "delivery", "score": 4 },
+        { "type": "price", "score": 4 },
+        { "type": "userFriendliness", "score": 4 }
+      ]
+    }
+  ]
+}
