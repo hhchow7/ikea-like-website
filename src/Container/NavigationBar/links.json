@@ -1,8 +1,6 @@
 {
     "links": [
-        {"id": 1, "name": "Inspiration", "path":"/"},
         {"id": 2, "name": "News", "path":"/news"},
-        {"id": 3, "name": "New Lower Price", "path":"/"},
         {"id": 4, "name": "Feedback", "path":"/feedback"}
     ]
 }
