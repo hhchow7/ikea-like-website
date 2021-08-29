@@ -13,7 +13,7 @@ export default function Slideshow() {
                         <img
                         className="d-block w-100"
                         id="img"
-                        src="/img/banner1.jpeg"
+                        src="/img/banner1.png"
                         alt="First slide"
                         />
                     </Carousel.Item>
@@ -21,7 +21,7 @@ export default function Slideshow() {
                         <img
                         className="d-block w-100"
                         id="img"
-                        src="/img/banner2.jpeg"
+                        src="/img/banner2.png"
                         alt="Second slide"
                         />
                     </Carousel.Item>
@@ -29,7 +29,7 @@ export default function Slideshow() {
                         <img
                         className="d-block w-100"
                         id="img"
-                        src="/img/banner3.jpeg"
+                        src="/img/banner3.png"
                         alt="Third slide"
                         />
                     </Carousel.Item>
