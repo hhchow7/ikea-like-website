@@ -40,3 +40,12 @@ $phones-media: 479px;
 
 // default setting
 $defaultFontSize: 16px;
+
+
+// Classes used to extend
+.flex-row-center {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+}

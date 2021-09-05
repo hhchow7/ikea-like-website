@@ -1,26 +1,77 @@
-.comment-header {
-    font-size: 1.4rem;
-    font-weight: 600;
+@import "../../../sass/variable.scss";
+
+@mixin feedback-big-screen() {
+  @media all and (min-width: 700px) {
+    @content;
+  }
 }
 
-.comment-area-all {
-    padding-left: 3rem;
-    padding-right: 3rem;
-}
-
-.comment-area-person {
-    width: 45%;
-}
-
-.person-name {
-    font-weight: 600;
-}
-
-.date {
-    font-size: 14px;
-    color: rgb(120, 111, 112)
-}
-
-.comment-content {
-    text-align: start;
+#feedback {
+  .feedback__content {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    @include feedback-big-screen {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+    .feedback__content__overall {
+      @extend .flex-row-center;
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+    .feedback__content__type {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      .feedback__content__type__item {
+        @extend .flex-row-center;
+        width: 45%;
+      }
+    }
+    .feedback__content__persons {
+      display: flex;
+      flex-direction: column;
+      @include feedback-big-screen {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      .feedback__content__persons__item {
+        @include feedback-big-screen {
+          flex-basis: 45%;
+        }
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        .feedback__content__persons__item__header {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          .feedback__content__persons__item__header__about {
+            @extend .flex-row-center;
+            .feedback__content__persons__item__header__about__text {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              .feedback__content__persons__item__header__about__text__name {
+                font-weight: 600;
+              }
+              .feedback__content__persons__item__header__about__text__date {
+                font-size: 0.875rem;
+                color: rgb(120, 111, 112);
+              }
+            }
+          }
+        }
+        .feedback__content__persons__item__comment {
+          text-align: start;
+        }
+      }
+    }
+  }
 }

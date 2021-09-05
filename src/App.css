@@ -1,3 +1,19 @@
+.flex-row-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .App {
   text-align: center;
 }
@@ -35,28 +51,28 @@ a {
 }
 
 .section-wrapper {
-  margin-left: 64px;
-  margin-right: 64px;
+  margin-left: 4rem;
+  margin-right: 4rem;
 }
 
 @media all and (min-width: 1050px) {
   .section-wrapper {
-    margin-left: 36px;
-    margin-right: 36px;
+    margin-left: 2.25rem;
+    margin-right: 2.25rem;
   }
 }
 
 @media all and (min-width: 480px) and (max-width: 759px) {
   .section-wrapper {
-    margin-left: 12px;
-    margin-right: 12px;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
   }
 }
 
 @media all and (max-width: 479px) {
   .section-wrapper {
-    margin-left: 12px;
-    margin-right: 12px;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
   }
 }
 /*# sourceMappingURL=App.css.map */

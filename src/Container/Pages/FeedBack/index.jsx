@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
+import { useMediaQuery } from "react-responsive";
+
 import Rating from "@material-ui/lab/Rating";
-import Box from "@material-ui/core/Box";
 import _ from "lodash";
 
 import { makeStyles } from "@material-ui/core/styles";
@@ -30,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Feedback() {
+  const isBigScreen = useMediaQuery({ query: "(min-width: 700px)" });
   const classes = useStyles();
   const [feedbacks, setFeedBacks] = useState([]);
   const [avgScoreByType, setAvgScoreByType] = useState({});
@@ -44,7 +46,7 @@ export default function Feedback() {
         });
         return {
           ...user,
-          avgScore:  _.round(userTotalScore / user.score.length, 1)
+          avgScore: _.round(userTotalScore / user.score.length, 1),
         };
       });
 
@@ -79,7 +81,7 @@ export default function Feedback() {
       let avgScoreObj = {};
       let total = 0;
       for (const [key, value] of Object.entries(typeTotalScore)) {
-        avgScoreObj[key] = (_.round(value / userData.length, 1));
+        avgScoreObj[key] = _.round(value / userData.length, 1);
         total += avgScoreObj[key];
       }
       avgScoreObj = {
@@ -92,56 +94,73 @@ export default function Feedback() {
   }, []);
 
   return (
-    <div className="section-wrapper">
+    <div className="section-wrapper" id="feedback">
       <div className="text-left">
         <span className="section-header">Feedback</span>
       </div>
       <div className="mb-3" />
-      <div className="d-flex flex-column comment-area-all">
-        <div className="d-flex flex-row justify-content-center align-items-center comment-header">
+      {/* <div className="d-flex flex-column comment-area-all"> */}
+      <div className="feedback__content">
+        <div className="feedback__content__overall">
           <div>
             <StarIcon style={{ color: "#17a2b8" }} />
           </div>
           <div>{avgScoreByType["overall"]}</div>
           <div className="ml-2"> - {feedbacks.length} comments</div>
         </div>
+        {isBigScreen && (
+          <>
+            <div className="mb-5" />
+            <div className="feedback__content__type">
+              {scoreTypes
+                ? scoreTypes.map((scoreType) => {
+                    return (
+                      <div
+                        key={scoreType.type}
+                        className="feedback__content__type__item mb-3"
+                      >
+                        <div className="mr-auto">{scoreType.name}</div>
+                        <ProgressBar
+                          percentage={
+                            (avgScoreByType[scoreType.type] / 5) * 100
+                          }
+                          style={{ width: "30%" }}
+                        />
+                        <div className="ml-2">
+                          {typeof avgScoreByType[scoreType.type] === "number"
+                            ? avgScoreByType[scoreType.type].toFixed(1)
+                            : ""}
+                        </div>
+                      </div>
+                    );
+                  })
+                : ""}
+            </div>
+          </>
+        )}
         <div className="mb-5" />
-        <div className="d-flex flex-row justify-content-between flex-wrap">
-          {scoreTypes
-            ? scoreTypes.map((scoreType) => {
-                return (
-                  <div key={scoreType.type} className="d-flex flex-row align-items-center comment-area-person mb-3">
-                    <div className="mr-auto">{scoreType.name}</div>
-                    <ProgressBar
-                      percentage={(avgScoreByType[scoreType.type] / 5) * 100}
-                      style={{ width: "30%" }}
-                    />
-                    <div className="ml-2">{typeof(avgScoreByType[scoreType.type]) === 'number'?(avgScoreByType[scoreType.type]).toFixed( 1 ) : ""}</div>
-                  </div>
-                );
-              })
-            : ""}
-        </div>
-
-        <div className="mb-5" />
-        <div className="d-flex flex-row justify-content-between flex-wrap">
+        <div className="feedback__content__persons">
           {feedbacks
             ? feedbacks.map((feedback) => {
                 return (
                   <div
                     key={feedback.id}
-                    className="d-flex flex-column align-items-start comment-area-person mb-5"
+                    className="feedback__content__persons__item mb-5"
                   >
-                    <div className="d-flex flex-row align-items-center justify-content-between w-100">
-                      <div className="d-flex flex-row align-items-center mb-2">
+                    <div className="feedback__content__persons__item__header">
+                      <div className="feedback__content__persons__item__header__about mb-2">
                         <div className="mr-2">
                           <Avatar className={classes.avatar}>
                             <FaceIcon />
                           </Avatar>
                         </div>
-                        <div className="d-flex flex-column align-items-start">
-                          <div className="person-name">{feedback.name}</div>
-                          <div className="date">{feedback.date}</div>
+                        <div className="feedback__content__persons__item__header__about__text">
+                          <div className="feedback__content__persons__item__header__about__text__name">
+                            {feedback.name}
+                          </div>
+                          <div className="feedback__content__persons__item__header__about__text__date">
+                            {feedback.date}
+                          </div>
                         </div>
                       </div>
                       <div>
@@ -152,7 +171,9 @@ export default function Feedback() {
                         />
                       </div>
                     </div>
-                    <div className="comment-content">{feedback.comment}</div>
+                    <div className="feedback__content__persons__item__comment">
+                      {feedback.comment}
+                    </div>
                   </div>
                 );
               })

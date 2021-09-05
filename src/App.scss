@@ -34,22 +34,22 @@ a {
 }
 
 .section-wrapper {
-  margin-left: 64px;
-  margin-right: 64px;
+  margin-left: 4rem;
+  margin-right: 4rem;
 
   @include pc-width {
-    margin-left: 36px;
-    margin-right: 36px;
+    margin-left: 2.25rem;
+    margin-right: 2.25rem;
   }
 
   @include small-pad-width{
-    margin-left: 12px;
-    margin-right: 12px;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
   }
 
   @include phone-width{
-    margin-left: 12px;
-    margin-right: 12px;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
   }
 
 }
