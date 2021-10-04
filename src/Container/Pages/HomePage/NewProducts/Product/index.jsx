@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import VisibilityIcon from "@material-ui/icons/Visibility";
 
-import "./style.css";
+import "./style.scss";
 
 export default function Product(props) {
   const { id, imgSrc, imgAlt, name, description, price } = props;

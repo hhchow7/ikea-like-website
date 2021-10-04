@@ -4,7 +4,7 @@ import Alert from 'react-bootstrap/Alert'
 import {useSelector, useDispatch} from 'react-redux'
 import {closeHeaderBar} from '../../redux/actions'
 
-import './style.css'
+import './style.scss'
 
 export default function HeaderBar(props)  {
 

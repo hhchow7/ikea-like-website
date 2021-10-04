@@ -8,7 +8,7 @@ import QuickViewDialog from './QuickViewDialog'
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 
-import './style.css'
+import './style.scss'
 
 var slickSettings = {
     arrows: true,

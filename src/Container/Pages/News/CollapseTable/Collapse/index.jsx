@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 
-import './style.css'
+import './style.scss'
 
 function Collapse(props) {
     const {item} = props

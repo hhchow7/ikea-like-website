@@ -15,7 +15,7 @@ import ShoppingCartBtn from './ShoppingCartBtn'
 import { ReactComponent as CloseMenu } from "../../asset/NavigationBar/opening-menu.svg";
 import { ReactComponent as MenuIcon } from "../../asset/NavigationBar/menu.svg";
 
-import "./style.css";
+import "./style.scss";
 import customLinks from './links.json'
 
 function NavigationBar() {

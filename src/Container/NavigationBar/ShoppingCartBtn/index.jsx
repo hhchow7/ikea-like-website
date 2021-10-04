@@ -2,7 +2,7 @@ import React from "react";
 import Badge from "@material-ui/core/Badge";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 
-import './style.css'
+import './style.scss'
 
 export default function App() {
     const [itemCount, setItemCount] = React.useState(0);

@@ -13,7 +13,7 @@ import FaceIcon from "@material-ui/icons/Face";
 import axios from "../../../api";
 import ProgressBar from "../../../Component/ProgressBar";
 
-import "./style.css";
+import "./style.scss";
 
 const scoreTypes = [
   { type: "communication", name: "Communication" },
